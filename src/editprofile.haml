@@ -1,0 +1,91 @@
+!!! 5
+%html
+  %head
+    %meta{:name=>'viewport', :content=>'width=device-width, initial-scale=1.0'}
+    %link{:rel=>'stylesheet',:href=>'//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css'}
+    %link{:rel=>'stylesheet',:href=>'//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css'}
+    %link{:rel=>'stylesheet',:href=>'./css/custom.css'}
+    %script{:src=>'//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'}
+    %script{:src=>'//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js'}
+    %script{:src=>'//cdnjs.cloudflare.com/ajax/libs/holder/2.0/holder.min.js'}
+    %title Edit Profile
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      %script{:src=>'//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js'}
+      %script{:src=>'//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js'}
+  %body.floating-body
+    -# Start Navbar
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle{:type=>'button',:data => {:toggle=>'collapse',:target=>'.navbar-collapse'}}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href=>'#'} Blog Title
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href=>'/'} Home
+            %li.dropdown
+              %a.dropdown-toggle{:href=>'#',:data => {:toggle=>'dropdown'}}
+                Archives
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href=>'/authors/'} By Author...
+                %li
+                  %a{:href=>'/categories/'} By Category...
+                %li
+                  %a{:href=>'/posts/'} By Date...
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a.dropdown-toggle{:href=>'#',:data => {:toggle=>'dropdown'}}
+                Kevin Raoofi
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href=>'/authors/1'} Profile...
+                %li
+                  %a{:href=>'articlepost.html'} Submit new post...
+                %li
+                  %a{:href=>'/admin'} Blog admin...
+
+
+    -# Start Page Component
+    .container
+      %h1 Profile
+      %form{:role=>'form'}
+        .form-group
+          .media
+            %img.pull-left.media-object{:src=>'holder.js/50x50'}
+            .media-body
+              %label.media-heading{:for=>'profpicture'} Profile Picture
+              %input#profpicture{:type=>'file',:disabled=>nil}
+        .form-group
+          %label{:for=>'firstname'} First Name
+          %input#firstname.form-control{:type=>'text', :placeholder=>'Enter First Name',:value=>'Kevin'}
+        .form-group
+          %label{:for=>'lastname'} Last Name
+          %input#lastname.form-control{:type=>'text', :placeholder=>'Enter Last Name',:value=>'Raoofi'}
+        .form-group
+          %label{:for=>'lastname'} Birthdate
+          %input#birthday.form-control{:type=>'datetime', :placeholder=>'Enter birthday'}
+        %label{:for=>'gender'} Gender
+        %select.form-control
+          %option{:value=>'0'} Other
+          %option{:value=>'1'} Male
+          %option{:value=>'2'} Female
+        .form-group
+          %label{:for=>'aboutme'} About Me
+          %textarea#aboutme.form-control{:placeholder=>'Enter a little bit of detail about yourself'}
+        .form-group
+          %label{:for=>'homepage'} Homepage
+          %input#homepage.form-control{:type=>'url', :placeholder=>'Enter the address to your homepage'}
+        .form-group
+          %label{:for=>'facebook'} Facebook
+          %input#facebook.form-control{:type=>'url', :placeholder=>'Enter the address to your Facebook'}
+        .form-group
+          %label{:for=>'twitter'} Twitter
+          %input#twitter.form-control{:type=>'url', :placeholder=>'Enter the address to your Twitter'}
+        %button.btn.btn-primary{:type=>'button'} Save
