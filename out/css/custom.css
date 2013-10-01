@@ -1,0 +1,12 @@
+.floating-body {
+	padding-top: 50px;
+}
+.centered {
+	margin: auto auto auto 50% ;
+}
+.upvote {
+	color: orange;
+}
+.downvote {
+	color: blue;
+}

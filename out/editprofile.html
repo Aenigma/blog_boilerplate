@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css' rel='stylesheet'>
+    <link href='./css/custom.css' rel='stylesheet'>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    <script src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/holder/2.0/holder.min.js'></script>
+    <title>Edit Profile</title>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js'></script>
+    <![endif]-->
+  </head>
+  <body class='floating-body'>
+    <div class='navbar navbar-default navbar-fixed-top'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='#'>Blog Title</a>
+        </div>
+        <div class='collapse navbar-collapse'>
+          <ul class='nav navbar-nav'>
+            <li class='active'>
+              <a href='/'>Home</a>
+            </li>
+            <li class='dropdown'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                Archives
+                <b class='caret'></b>
+              </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/authors/'>By Author...</a>
+                </li>
+                <li>
+                  <a href='/categories/'>By Category...</a>
+                </li>
+                <li>
+                  <a href='/posts/'>By Date...</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class='nav navbar-nav navbar-right'>
+            <li>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                Kevin Raoofi
+                <b class='caret'></b>
+              </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/authors/1'>Profile...</a>
+                </li>
+                <li>
+                  <a href='articlepost.html'>Submit new post...</a>
+                </li>
+                <li>
+                  <a href='/admin'>Blog admin...</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <h1>Profile</h1>
+      <form role='form'>
+        <div class='form-group'>
+          <div class='media'>
+            <img class='pull-left media-object' src='holder.js/50x50'>
+            <div class='media-body'>
+              <label class='media-heading' for='profpicture'>Profile Picture</label>
+              <input id='profpicture' type='file'>
+            </div>
+          </div>
+        </div>
+        <div class='form-group'>
+          <label for='firstname'>First Name</label>
+          <input class='form-control' id='firstname' placeholder='Enter First Name' type='text' value='Kevin'>
+        </div>
+        <div class='form-group'>
+          <label for='lastname'>Last Name</label>
+          <input class='form-control' id='lastname' placeholder='Enter Last Name' type='text' value='Raoofi'>
+        </div>
+        <div class='form-group'>
+          <label for='lastname'>Birthdate</label>
+          <input class='form-control' id='birthday' placeholder='Enter birthday' type='datetime'>
+        </div>
+        <label for='gender'>Gender</label>
+        <select class='form-control'>
+          <option value='0'>Other</option>
+          <option value='1'>Male</option>
+          <option value='2'>Female</option>
+        </select>
+        <div class='form-group'>
+          <label for='aboutme'>About Me</label>
+          <textarea class='form-control' id='aboutme' placeholder='Enter a little bit of detail about yourself'></textarea>
+        </div>
+        <div class='form-group'>
+          <label for='homepage'>Homepage</label>
+          <input class='form-control' id='homepage' placeholder='Enter the address to your homepage' type='url'>
+        </div>
+        <div class='form-group'>
+          <label for='facebook'>Facebook</label>
+          <input class='form-control' id='facebook' placeholder='Enter the address to your Facebook' type='url'>
+        </div>
+        <div class='form-group'>
+          <label for='twitter'>Twitter</label>
+          <input class='form-control' id='twitter' placeholder='Enter the address to your Twitter' type='url'>
+        </div>
+        <button class='btn btn-primary' type='button'>Save</button>
+      </form>
+    </div>
+  </body>
+</html>

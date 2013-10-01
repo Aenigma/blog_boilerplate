@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css' rel='stylesheet'>
+    <link href='./css/custom.css' rel='stylesheet'>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+    <script src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/holder/2.0/holder.min.js'></script>
+    <title>Blog Index</title>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js'></script>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js'></script>
+    <![endif]-->
+  </head>
+  <body class='floating-body'>
+    <div class='navbar navbar-default navbar-fixed-top'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='#'>Blog Title</a>
+        </div>
+        <div class='collapse navbar-collapse'>
+          <ul class='nav navbar-nav'>
+            <li class='active'>
+              <a href='/'>Home</a>
+            </li>
+            <li class='dropdown'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                Archives
+                <b class='caret'></b>
+              </a>
+              <ul class='dropdown-menu'>
+                <li>
+                  <a href='/authors/'>By Author...</a>
+                </li>
+                <li>
+                  <a href='/categories/'>By Category...</a>
+                </li>
+                <li>
+                  <a href='/posts/'>By Date...</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class='nav navbar-nav navbar-right'>
+            <li>
+              <a class='btn' data-toggle='modal' href='#signin'>
+                Sign in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-9'>
+          <article>
+            <section class='article-metadata'>
+              <h2>Article Title</h2>
+              Posted on
+              <time datetime='2013-09-17 15:00'>September 17, 2013</time>
+              by
+              <a href='./users/1/' rel='author'>Kevin Raoofi</a>
+              <ul class='list-inline'>
+                <li>
+                  <a href='./categories/1'>
+                    <span class='label label-info'>Category1</span>
+                  </a>
+                </li>
+                <li>
+                  <a href='./categories/2'>
+                    <span class='label label-info'>Category2</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!-- This entire section should probably be HTML from server -->
+            <div class='article-body'>
+              <p>
+                This is a sample article body
+              </p>
+            </div>
+            <div class='article-extras'>
+              <span class='glyphicon glyphicon-chevron-up upvote'></span>
+              <span class='badge'>10</span>
+              <span class='glyphicon glyphicon-chevron-down'></span>
+              <button class='btn btn-primary btn-sm' type='button'>Comment</button>
+              <a class='btn btn-primary btn-sm' href='articleedit.html'>Edit</a>
+              <div class='article-extras-social pull-right'>
+                <button class='btn btn-xs' type='button'>Facebook</button>
+                <button class='btn btn-xs' type='button'>Google+</button>
+                <button class='btn btn-xs' type='button'>Twitter</button>
+              </div>
+            </div>
+            <div class='article-comments media'>
+              <ul class='media-list'>
+                <li class='comment media'>
+                  <img class='pull-left' src='holder.js/50x50/'>
+                  <div class='media-body'>
+                    <div class='media-heading'>
+                      Posted on
+                      <time datetime='2013-09-17 15:00'>September 17, 2013</time>
+                      by
+                      <a href='./users/1/' rel='author'>Kevin Raoofi</a>
+                    </div>
+                    <div class='comment-body'>
+                      <p>
+                        This is a sample comment
+                      </p>
+                    </div>
+                    <div class='comment-actions'>
+                      <span class='glyphicon glyphicon-chevron-up'></span>
+                      <span class='badge'>0</span>
+                      <span class='glyphicon glyphicon-chevron-down'></span>
+                      <button class='btn btn-primary btn-xs' type='button'>Reply</button>
+                      <button class='btn btn-primary btn-xs' type='button'>Edit</button>
+                      <button class='btn btn-danger btn-xs' type='button'>Delete</button>
+                    </div>
+                    <div class='comment media'>
+                      <img class='pull-left' src='holder.js/50x50/'>
+                      <div class='media-body'>
+                        <div class='media-heading'>
+                          Posted on
+                          <time datetime='2013-09-17 15:00'>September 17, 2013</time>
+                          by
+                          <a href='./users/2/' rel='author'>John Butler</a>
+                        </div>
+                        <div class='comment-body'>
+                          <p>
+                            This is another sample comment
+                          </p>
+                        </div>
+                        <div class='comment-actions'>
+                          <span class='glyphicon glyphicon-chevron-up'></span>
+                          <span class='badge'>-1</span>
+                          <span class='glyphicon glyphicon-chevron-down downvote'></span>
+                          <button class='btn btn-primary btn-xs' type='button'>Reply</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <hr>
+          </article>
+          <article>
+            <section class='article-metadata'>
+              <h2>Lorem Ipsum</h2>
+              Posted on
+              <time datetime='2013-09-17 15:00'>September 17, 2013</time>
+              by
+              <a href='./users/1/' rel='author'>Kevin Raoofi</a>
+              <ul class='list-inline'>
+                <li>
+                  <a href='./categories/1'>
+                    <span class='label label-info'>Category1</span>
+                  </a>
+                </li>
+                <li>
+                  <a href='./categories/2'>
+                    <span class='label label-info'>Category2</span>
+                  </a>
+                </li>
+                <li></li>
+              </ul>
+            </section>
+            <!-- This entire section should probably be HTML from server -->
+            <div class='article-body'>
+              <p>
+                The Master Donna Noble has left the library. Donna Noble has been
+                saved. Dalekanium wibbly-wobbly timey-wimey You will be
+                exterminated!  Hello, Captain Jack Harkness.  the girl who waited
+                Mickey Smith MY VISION IS IMPAIRED! I really hate stairs.
+                EXTERMINATE ALL STAIRCASES!  Skaro I wear a fez now, fezzes are
+                cool Emperor of the Daleks Geronimo Are you my mummy? DON'T BLINK!
+                EXTERMINATE! Are you my mummy? IT is the Doctor! Enemy of the
+                Daleks! Bow ties are cool Geronimo! EXTERMINATE! YOU WILL OBEY!
+                Emperor of the Daleks The Master I really hate stairs. EXTERMINATE
+                ALL STAIRCASES! Emperor of the Daleks Delete. Delete. Delete. The
+                angels have the phone box The Master Galifreyan The Master YOU WILL
+                OBEY! EXTERMINATE! The Silence is Coming! Bow ties are cool Delete.
+                Delete. Delete. Galifrey Cybermen Mickey Smith puny human Bow ties
+                are cool It's bigger on the inside! Davros Delete. Delete. Delete.
+                MY VISION IS IMPAIRED! Rory the Roman EXTERMINATE! Galifreyan I
+                hereby invoke The Shadow Proclamation! Reverse the polarity of the
+                neutron flow Demon's Run Spoilers! Mickey Smith River Song
+                EXTERMINATE! I hereby invoke The Shadow Proclamation! Are you my
+                mummy? Emperor of the Daleks wibbly-wobbly timey-wimey Bad Wolf
+                Delete. Delete. Delete.  EXTERMINATE! Are you my mummy? River Song
+                EXTERMINATE! I really hate stairs. EXTERMINATE ALL STAIRCASES!
+                Stormageddon, Dark Lord of All I wear a fez now, fezzes are cool
+                Fantastic! K-9 the oncoming storm wibbly wobbly timey wimey
+                wibbly-wobbly timey-wimey EXTERMINATE! YOU WILL OBEY! YOU WILL
+                OBEY! EXTERMINATE! It's bigger on the inside!  Puny Human! I wear a
+                fez now, fezzes are cool I wear a fez now, fezzes are cool Time War
+                ninehundred  Rory the Roman Raxacoricofallapatorius I really hate
+                stairs. EXTERMINATE ALL STAIRCASES! Bananas are good Hello sweetie!
+                Spoilers! Puny Human!  Allons-y Rose Tyler Puny Human! wibbly
+                wobbly timey wimey Donna Noble I am a Dalek puny human River Song
+                You are better at dying wibbly-wobbly timey-wimey
+              </p>
+              <p>
+                Allons-y, Alonso! Allons-y Amy Pond Bananas are good Time Lord
+                Dalekanium Donna Noble Geronimo EXTERMINATE!
+                Raxacoricofallapatorius The socks with holes, dummy! I am a Dalek
+                EXTERMINATE! Raxacoricofallapatorius Galifrey EXTERMINATE! Donna
+                Noble has left the library. Donna Noble has been saved. ninehundred
+                We are Dalek IT is the Doctor! Enemy of the Daleks! Delete. Delete.
+                Delete. Galifrey Are you my mummy? You are better at dying Cybermen
+                Geronimo! Bad Wolf Silence will fall Bring the Humans to me The
+                Doctor EXTERMINATE! Dalekanium The Master Demon's Run EXTERMINATE!
+                Bring the Humans to me puny human Raxacoricofallapatorius The
+                Silence is Coming! It's bigger on the inside! The Shadow
+                Proclamation The Shadow Proclamation the oncoming storm Time War
+                Fantastic! You will be exterminated! RUN! EXTERMINATE! you are not
+                alone in the universe wibbly wobbly timey wimey IT is the Doctor!
+                Enemy of the Daleks!
+              </p>
+              <p>
+                ninehundred  Cybermen wibbly wobbly timey wimey Hello sweetie
+                EXTERMINATE! the girl who waited wibbly wobbly timey wimey YOU WILL
+                OBEY! Geronimo Bad Wolf  Hello sweetie! The Master Bow ties are
+                cool Rose Tyler Bananas are good Hello sweetie! Captain Jack
+                Harkness EXTERMINATE! the oncoming storm EXTERMINATE! you are not
+                alone in the universe you are not alone in the universe Amy Pond
+                Cybermen Dalekanium EXTERMINATE! It's bigger on the inside! It's
+                bigger on the inside! Would you like a jelly baby? Demon's Run Time
+                Lord You will be exterminated! Geronimo Reverse the polarity of the
+                positron flow YOU WILL OBEY! The Shadow Proclamation Silence will
+                fall Rory the Roman The angels have the phone box Bow ties are cool
+                Reverse the polarity of the neutron flow Dalekanium EXTERMINATE!
+                Raxacoricofallapatorius Hello, Captain Jack Harkness.  EXTERMINATE!
+                Hello Sweetie. K-9 Delete. Delete. Delete. Time Lord DON'T BLINK!
+              </p>
+            </div>
+            <hr>
+            <div class='article-extras'>
+              <span class='glyphicon glyphicon-chevron-up'></span>
+              <span class='badge'>5</span>
+              <span class='glyphicon glyphicon-chevron-down downvote'></span>
+              <button class='btn btn-primary btn-sm' type='button'>Comment</button>
+              <div class='article-extras-social pull-right'>
+                <button class='btn btn-xs' type='button'>Facebook</button>
+                <button class='btn btn-xs' type='button'>Google+</button>
+                <button class='btn btn-xs' type='button'>Twitter</button>
+              </div>
+              <hr>
+            </div>
+            <div class='article-comments row'>
+              <div class='comment col-xs-12' data-indent='0'>
+                <img src='holder.js/50x50/'>
+                Posted on
+                <time datetime='2013-09-17 15:00'>September 17, 2013</time>
+                by
+                <a href='./users/1/' rel='author'>Kevin Raoofi</a>
+                <div class='comment-body'>
+                  <p>
+                    Donna Noble Hey, who turned out the lights? Cult of Skaro Are
+                    you my mummy? EXTERMINATE! Silence will fall EXTERMINATE! Bow
+                    ties are cool wibbly-wobbly timey-wimey Cult of Skaro
+                    Raxacoricofallapatorius Rory the Roman EXTERMINATE! MY VISION
+                    IS IMPAIRED! Allons-y Time Lord Cult of Skaro It's bigger on
+                    the inside! Time War Bad Wolf  wibbly-wobbly timey-wimey You
+                    are better at dying Reverse the polarity of the positron flow
+                    Rude and not ginger You will be exterminated! EXTERMINATE!
+                    ninehundred  K-9 The Silence is Coming! Bow ties are cool
+                    EXTERMINATE! Rose Tyler Bananas are good wibbly-wobbly
+                    timey-wimey EXTERMINATE! Tick tock goes the clock...
+                    Raxacoricofallapatorius YOU WILL OBEY! Emperor of the Daleks
+                    Hello sweetie Bad Wolf The angels have the phone box DON'T
+                    BLINK! Cybermen EXTERMINATE! Amy Pond the oncoming storm Bow
+                    ties are cool. The Shadow Proclamation I hereby invoke The
+                    Shadow Proclamation! The socks with holes, dummy! IT is the
+                    Doctor! Enemy of the Daleks! Reverse the polarity of the
+                    positron flow Bow ties are cool the oncoming storm DON'T BLINK!
+                    Bow ties are cool YOU WILL OBEY! Amy Pond Bad Wolf  Mickey
+                    Smith Dalekanium Hello Sweetie. I hereby invoke The Shadow
+                    Proclamation! EXTERMINATE! Bananas are good DON'T BLINK! IT is
+                    the Doctor! Enemy of the Daleks! Would you like a jelly baby?
+                    Dalekanium Time War you are not alone in the universe Demon's
+                    Run You will be exterminated! I hereby invoke The Shadow
+                    Proclamation! Rose Tyler Galifreyan You are better at dying MY
+                    VISION IS IMPAIRED! EXTERMINATE! puny human Hello sweetie!
+                    wibbly wobbly timey wimey The Supreme Dalek Hello sweetie!
+                    Bananas are good The Shadow Proclamation Hello, Captain Jack
+                    Harkness.  ninehundred  Cult of Skaro I hereby invoke The
+                    Shadow Proclamation! Allons-y, Alonso! Fantastic! Skaro
+                    EXTERMINATE! We are Dalek Rory the Roman Hello Sweetie. The
+                    Silence is Coming! EXTERMINATE! Demon's Run Puny Human! Time
+                    War Hello sweetie MY VISION IS IMPAIRED! EXTERMINATE! Galifrey
+                    Are you my mummy? I wear a fez now, fezzes are cool Galifreyan
+                    I hereby invoke The Shadow Proclamation! I am a Dalek Donna
+                    Noble Amy Pond DON'T BLINK! I am a Dalek Bow ties are cool
+                    Dalekanium It's bigger on the inside! The Master Are you my
+                    mummy? The Shadow Proclamation Bananas are good Are you my
+                    mummy? YOU WILL OBEY! Time Lord Cybermen Time Lord Galifrey
+                    Donna Noble Captain Jack Harkness Tick tock goes the clock...
+                    Rude and not ginger wibbly-wobbly timey-wimey Reverse the
+                    polarity of the neutron flow The Shadow Proclamation wibbly
+                    wobbly timey wimey MY VISION IS IMPAIRED! Donna Noble
+                    EXTERMINATE! Mickey Smith Hello, Captain Jack Harkness.  MY
+                    VISION IS IMPAIRED! Bad Wolf  I really hate stairs. EXTERMINATE
+                    ALL STAIRCASES! Spoilers! Raxacoricofallapatorius I hereby
+                    invoke The Shadow Proclamation! Emperor of the Daleks The
+                    Silence is Coming! EXTERMINATE!
+                  </p>
+                </div>
+                <div class='comment-actions'>
+                  <span class='glyphicon glyphicon-chevron-up'></span>
+                  <span class='badge'>0</span>
+                  <span class='glyphicon glyphicon-chevron-down'></span>
+                  <button class='btn btn-primary btn-xs' type='button'>Reply to Comment</button>
+                </div>
+              </div>
+              <div class='col-xs-1 col-xs-offset-1'></div>
+              <div class='comment col-xs-11' data-indent='1'>
+                <img src='holder.js/50x50/'>
+                Posted on
+                <time datetime='2013-09-17 15:00'>September 17, 2013</time>
+                by
+                <a href='./users/1/' rel='author'>Kevin Raoofi</a>
+                <div class='comment-body'>
+                  <p>
+                    you are not alone in the universe Are you my mummy? I am a
+                    Dalek Rude and not ginger The Master Galifreyan Donna Noble
+                    Cult of Skaro Hello Sweetie. I wear a fez now, fezzes are cool
+                    Silence will fall the girl who waited The angels have the phone
+                    box Davros Hello Sweetie. Rose Tyler Bananas are good Are you
+                    my mummy? Donna Noble has left the library. Donna Noble has
+                    been saved. The Master EXTERMINATE! Bad Wolf
+                    Raxacoricofallapatorius I really hate stairs. EXTERMINATE ALL
+                    STAIRCASES! Mickey Smith YOU WILL OBEY! The angels have the
+                    phone box Are you my mummy? Davros EXTERMINATE! Bring the
+                    Humans to me The Master you are not alone in the universe Puny
+                    Human! ninehundred  Hello, Captain Jack Harkness.
+                    Stormageddon, Dark Lord of All Mickey Smith Puny Human! puny
+                    human Geronimo I am a Dalek Bow ties are cool RUN! you are not
+                    alone in the universe you are not alone in the universe puny
+                    human IT is the Doctor! Enemy of the Daleks! Bad Wolf  Emperor
+                    of the Daleks Rude and not ginger
+                  </p>
+                </div>
+                <div class='comment-actions'>
+                  <span class='glyphicon glyphicon-chevron-up'></span>
+                  <span class='badge'>0</span>
+                  <span class='glyphicon glyphicon-chevron-down'></span>
+                  <button class='btn btn-primary btn-xs' type='button'>Reply to Comment</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class='well col-md-3'>
+          <h3>Categories</h3>
+          <ul class='list-group'>
+            <li class='list-group-item'>
+              <a href='./categories/1'>Category1</a>
+            </li>
+            <li class='list-group-item'>
+              <a href='./categories/2'>Category2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <ul class='pagination pagination-lg centered'>
+        <li class='disabled'>
+          <a href='#'>&laquo;</a>
+        </li>
+        <li class='active'>
+          <a href='#'>1</a>
+        </li>
+        <li>
+          <a href='./2'>2</a>
+        </li>
+        <li>
+          <a href='./3'>3</a>
+        </li>
+        <li>
+          <a href='./2'>&raquo;</a>
+        </li>
+      </ul>
+      <div aria-hidden='true' aria-labeledby='signinmodal' class='modal fade' id='signin' role='dialog' tabindex='-1'>
+        <div class='modal-dialog'>
+          <div class='modal-content'>
+            <div class='modal-header'>
+              <button aria-hidden='true' class='close' data-dismiss='modal' type='button'>&times;</button>
+              <h4 class='modal-title'>Sign In</h4>
+            </div>
+            <div class='modal-body'>
+              <form role='form'>
+                <div class='form-group'>
+                  <label for='signin-username'>Username</label>
+                  <input class='form-control' id='signin-username' placeholder='Your username' type='text'>
+                </div>
+                <div class='form-group'>
+                  <label for='signin-password'>Password</label>
+                  <input class='form-control' id='signin-password' placeholder='Password' type='password'>
+                </div>
+              </form>
+            </div>
+            <div class='modal-footer'>
+              <button class='btn btn-primary'>Sign in</button>
+              <button class='btn btn-default' data-target='#signup' data-toggle='modal'>Sign up</button>
+              <button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden='true' aria-labeledby='signupmodal' class='modal fade' id='signup' role='dialog' tabindex='-1'>
+        <div class='modal-dialog'>
+          <div class='modal-content'>
+            <div class='modal-header'>
+              <button aria-hidden='true' class='close' data-dismiss='modal' type='button'>&times;</button>
+              <h4 class='modal-title'>Sign Up</h4>
+            </div>
+            <div class='modal-body'>
+              <form role='form'>
+                <div class='form-group'>
+                  <label for='signup-username'>Username</label>
+                  <input class='form-control' id='signup-username' placeholder='Your username' type='text'>
+                </div>
+                <div class='form-group'>
+                  <label for='signup-email'>Email</label>
+                  <input class='form-control' id='signup-email' placeholder='Your Email' type='email'>
+                </div>
+                <div class='form-group'>
+                  <label for='signup-password1'>Password</label>
+                  <input class='form-control' id='signup-password1' placeholder='Enter Your Password' type='password'>
+                </div>
+                <div class='form-group'>
+                  <label for='signup-password2'>Re-Enter Password</label>
+                  <input class='form-control' id='signup-password2' placeholder='Enter Password Again' type='password'>
+                </div>
+              </form>
+            </div>
+            <div class='modal-footer'>
+              <button class='btn btn-primary'>Submit</button>
+              <button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
